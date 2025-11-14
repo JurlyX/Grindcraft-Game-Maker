@@ -18,7 +18,7 @@ addResources({                                          // Function for adding a
     stick: {
         image: "images/stick.png",
     },
-    Glock-19: {
+    glock-19: {
         image: "images/gun.png",
     },
     planks: {
@@ -37,7 +37,7 @@ addResources({                                          // Function for adding a
 
 // Areas
 
-addArea("c",                                            // Function for adding areas to your game
+addgArea("c",                                            // Function for adding areas to your game
 {
     name: "City State",
     image: "images/areas/cityState.png",
@@ -48,7 +48,7 @@ addArea("c",                                            // Function for adding a
         {
             name: "surface",
             unlocked: true,
-            auto: ["dirt hut"],                         // List of items that will auto-grind this grind
+            auto: ["glock-19"],                         // List of items that will auto-grind this grind
             background: "images/grinds/overworld.png",
             resources: [
                 {
@@ -67,9 +67,16 @@ addArea("c",                                            // Function for adding a
 
     crafts: [
         {
+            name: "glock-19",
+            desc: "Used to craft planks",
+            type: "craft",
+            amount: 1,
+            cost: [["dirt", 1]],
+        },
+        {
             name: "stick",
             desc: "Used to craft planks",
-            type: "display",
+            type: "craft",
             amount: 4,
             cost: [["planks", 2]],
         },
