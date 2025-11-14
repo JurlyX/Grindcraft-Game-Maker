@@ -1,9 +1,9 @@
 // Game Info
 setGameInfo({
-    name: "My Grindcraft Game",                         // The name of your game!
-    version: "0.1",                                     // The current version of your game!
+    name: "Get On The Grind!",                         // The name of your game!
+    version: "1",                                     // The current version of your game!
     icon: "images/system/blank.png",                    // Link or path to an icon image for your game!
-    ID: "myGrindcraftGame",                             // Your game's ID! Should be unique for every game!
+    ID: "GOTG",                             // Your game's ID! Should be unique for every game!
 });
 
 // Resources
@@ -12,8 +12,14 @@ addResources({                                          // Function for adding a
     dirt: {
         image: "images/dirt.png",
     },
+    log: {
+        image: "images/system/blank.png",
+    },
     stick: {
         image: "images/stick.png",
+    },
+    Glock-19: {
+        image: "images/gun.png",
     },
     planks: {
         image: "images/planks.png",
@@ -46,14 +52,14 @@ addArea("c",                                            // Function for adding a
             background: "images/grinds/overworld.png",
             resources: [
                 {
-                    id: "stick",
-                    time: [["", 0.5]],
-                    probability: 50,
+                    id: "log",
+                    time: [["", 1]],
+                    probability: 25,
                 },
                 {
                     id: "dirt",
-                    time: [["", 0.6]],
-                    probability: 50,
+                    time: [["", 0.6], ["Glock-19", 0]]
+                    probability: 75,
                 },
             ]
         },
@@ -64,7 +70,8 @@ addArea("c",                                            // Function for adding a
             name: "stick",
             desc: "Used to craft planks",
             type: "display",
-            cost: [["stick", 0]],
+            amount: 4,
+            cost: [["planks", 2]],
         },
         {
             name: "dirt",
@@ -76,7 +83,8 @@ addArea("c",                                            // Function for adding a
             name: "planks",
             desc: "Used to make a crafting table",
             type: "craft",
-            cost: [["stick", 2]],
+            amount: 4,
+            cost: [["log", 1]],
         },
         {
             name: "crafting table",
