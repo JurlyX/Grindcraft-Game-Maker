@@ -53,12 +53,12 @@ addArea("c",                                            // Function for adding a
             resources: [
                 {
                     id: "log",
-                    time: [["", 1]],
+                    time: [["", 1], ["Glock-19", 0]],
                     probability: 25,
                 },
                 {
                     id: "dirt",
-                    time: [["", 0.6], ["Glock-19", 0]]
+                    time: [["", 0.6], ["Glock-19", 0]],
                     probability: 75,
                 },
             ]
